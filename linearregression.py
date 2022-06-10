@@ -46,7 +46,7 @@ def plotcountrour(X, y, history):
     plt.savefig("lin-reg/cont.png")
 
 
-with open('prices.csv', 'r') as file:
+with open('dataset/prices.csv', 'r') as file:
     prices = [list(map(float, row)) for row in reader(file)]
     X = np.array([[1, *row[0: -1]] for row in prices])
     y = np.array([[row[-1]] for row in prices])

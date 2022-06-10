@@ -70,11 +70,12 @@ def calc(theta, x1, x2):
 def func(x1, x2, theta):
     return theta[0, 0] + theta[1, 0] * x1 + theta[2, 0] * x2 + theta[3, 0] * x1 * x1 + theta[4, 0] * x2 * x2
 
+
 mapping = {
     1: ['Yes', 'x', 'r'],
     0: ['No', 'o', 'y']}
 
-with open('illness.csv', 'r') as illness:
+with open('dataset/illness.csv', 'r') as illness:
 
     data = [list(map(float, row)) for row in reader(illness)]
 
